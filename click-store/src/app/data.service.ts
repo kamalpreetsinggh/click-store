@@ -1,0 +1,176 @@
+import { Injectable } from '@angular/core';
+import { ItemsData } from './ItemsData';
+import { Subject } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataService {
+  items = [{
+    'name': 'mango',
+    'cat': 'fruit',
+    'price': '100'
+  }, {
+    'name': 'pineapple',
+    'cat': 'fruit',
+    'price': '150'
+  }, {
+    'name': 'banana',
+    'cat': 'fruit',
+    'price': '20'
+  }, {
+    'name': 'blueberry',
+    'cat': 'fruit',
+    'price': '2000'
+  }, {
+    'name': 'papaya',
+    'cat': 'fruit',
+    'price': '100'
+  }, {
+    'name': 'blackcurrant',
+    'cat': 'fruit',
+    'price': '1000'
+  }, {
+    'name': 'avocado',
+    'cat': 'fruit',
+    'price': '1000'
+  }, {
+    'name': 'kiwi',
+    'cat': 'fruit',
+    'price': '50'
+  }, {
+    'name': 'orange',
+    'cat': 'fruit',
+    'price': '40'
+  }, {
+    'name': 'peach',
+    'cat': 'fruit',
+    'price': '60'
+  }, {
+    'name': 'broccoli',
+    'cat': 'vegetable',
+    'price': '300'
+  }, {
+    'name': 'cabbage',
+    'cat': 'vegetable',
+    'price': '100'
+  }, {
+    'name': 'potato',
+    'cat': 'vegetable',
+    'price': '100'
+  }, {
+    'name': 'carrot',
+    'cat': 'vegetable',
+    'price': '100'
+  }, {
+    'name': 'tomato',
+    'cat': 'vegetable',
+    'price': '100'
+  }, {
+    'name': 'turnip',
+    'cat': 'vegetable',
+    'price': '150'
+  }, {
+    'name': 'pumpkin',
+    'cat': 'vegetable',
+    'price': '300'
+  }, {
+    'name': 'onion',
+    'cat': 'vegetable',
+    'price': '200'
+  }, {
+    'name': 'mushroom',
+    'cat': 'vegetable',
+    'price': '500'
+  }, {
+    'name': 'capsicum',
+    'cat': 'vegetable',
+    'price': '200'
+  }, {
+    'name': 'oreo',
+    'cat': 'biscuit',
+    'price': '35'
+  }, {
+    'name': 'goodday',
+    'cat': 'biscuit',
+    'price': '20'
+  }, {
+    'name': 'parleg',
+    'cat': 'biscuit',
+    'price': '10'
+  }, {
+    'name': 'tiger',
+    'cat': 'biscuit',
+    'price': '20'
+  }, {
+    'name': 'crackjack',
+    'cat': 'biscuit',
+    'price': '20'
+  }, {
+    'name': 'monaco',
+    'cat': 'biscuit',
+    'price': '20'
+  }, {
+    'name': 'treat',
+    'cat': 'biscuit',
+    'price': '30'
+  }, {
+    'name': 'darkfantasy',
+    'cat': 'biscuit',
+    'price': '35'
+  }, {
+    'name': 'nutrichoice',
+    'cat': 'biscuit',
+    'price': '50'
+  }, {
+    'name': 'bounce',
+    'cat': 'biscuit',
+    'price': '10'
+  }, {
+    'name': 'milk',
+    'cat': 'diary',
+    'price': '25'
+  }, {
+    'name': 'cheese',
+    'cat': 'diary',
+    'price': '100'
+  }, {
+    'name': 'curd',
+    'cat': 'diary',
+    'price': '25'
+  }, {
+    'name': 'butter',
+    'cat': 'diary',
+    'price': '30'
+  }, {
+    'name': 'icecream',
+    'cat': 'diary',
+    'price': '100'
+  }, {
+    'name': 'dessert',
+    'cat': 'diary',
+    'price': '100'
+  }, {
+    'name': 'custard',
+    'cat': 'diary',
+    'price': '250'
+  }, {
+    'name': 'milkshake',
+    'cat': 'diary',
+    'price': '100'
+  }, {
+    'name': 'yogurt',
+    'cat': 'diary',
+    'price': '100'
+  }, {
+    'name': 'avocadodip',
+    'cat': 'diary',
+    'price': '300'
+  }];
+
+  public data = new Subject<any>();
+  constructor() { }
+  displayItemsByCategory(category: string) {
+    this.data.next(category);
+  }
+}

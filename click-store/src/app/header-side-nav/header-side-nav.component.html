@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+  <div class="navbar-header">
+      <h2>
+        CLICK STORE
+      </h2>
+    </div>
+  </div>
+  <div id="sideNav">
+    <div id="close">
+      <a id="closeButton" (click)="closeNav()">&times;</a>
+    </div>
+    <a id="fruits" (click)="displayItems('fruits')">Fruits</a>
+    <a id="vegetables" (click)="displayItems('vegetables')">Vegetables</a>
+    <a id="biscuits" (click)="displayItems('biscuits')">Biscuits</a>
+    <a id="diary" (click)="displayItems('diary')">Diary</a>
+  </div>
+  <div id="sideNavIcon" (click)="openNav()">&#9776;</div>
+</nav>
