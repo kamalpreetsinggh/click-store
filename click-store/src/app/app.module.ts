@@ -10,6 +10,10 @@ const routes = [
   {
     path: 'category',
     component: CatComponent,
+  },
+  {
+    path: '',
+    component: ContentAreaComponent
   }
 ];
 @NgModule({

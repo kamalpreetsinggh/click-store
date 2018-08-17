@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cat.component.css']
 })
 export class CatComponent implements OnInit {
-
+  catItems=[];
   constructor() { }
 
   ngOnInit() {

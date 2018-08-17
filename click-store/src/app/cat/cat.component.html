@@ -1,2 +1,19 @@
-
-
+<div class="container">
+  <div id="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of catItems">
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+          <td><input type="number"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
